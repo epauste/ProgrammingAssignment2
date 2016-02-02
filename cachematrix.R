@@ -7,8 +7,8 @@
 ## cacheSolve(x) - Subsequent use, inverted matrix will be retreived from the cache
 
 ## makeCacheMatrix
-## This function accepts one argument, a square invertible matrix ( note no checking is performed ).
-## The reveived matrix will then be inverted, and its cachee will be stored.
+## This function accepts one argument, a square matrix ( note no checking is performed ).
+## The received matrix will then be stored for further operations.
 ## The function returns a list of functions that can be used to set / get the following data
 ## set - set matrix data
 ## get - get matrix data 
@@ -33,10 +33,10 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## cacheSolve
 ## This function computes the inverse of the special "matrix" returned by function makeCacheMatrix . 
-## If the inverse has already been calculated (and the matrix has not changed), then the cachesolve should retrieve the inverse from the cache.
+## If the inverse has already been calculated (and the matrix has not changed), then the cachesolve will retrieve the inverse from the cache.
 ## In this scenario, the user will be informed that the cached version is being returned.
 ## Otherwise the inverse of the matrix is calculated and the cache updated. 
-##
+## 
 
 cacheSolve <- function(x, ...) {
       ## Return a matrix that is the inverse of 'x'
